@@ -1,7 +1,7 @@
 {
-  "name": "best-of-the-new-slides",
+  "name": "make-it-happen-workshop",
   "version": "4.0.2",
-  "description": "Best of the New: presentation slides",
+  "description": "Make It Happen With APIs",
   "homepage": "https://revealjs.com",
   "subdomain": "revealjs",
   "main": "dist/reveal.js",
