@@ -185,36 +185,62 @@
 						</pre>
 						<aside class="notes">
 							This is an example of what a relational database table looks like. This table is used for storing information about 
-							different fruits that you can buy in the grocery store. As you can see, there are 4 columns: ID, product name, PLU number, and price.
+							different fruits that you can buy in the grocery store. Whenever you check out of a grocery store, the computer that 
+							the cashier uses has to access information from database tables like this one.<br/>
+							As you can see, there are 5 rows of data and 4 columns: ID, product name, PLU number, and price.
+							When we create a table we have to give each column a name and say what data type we want it to store. 
+							For example, the product name column has a data type called 'variable character' or VarChar for shirt. This data type is 
+							used for storing text characters that can vary in length. The ID column has an integer data type, which is used for storing numbers. <br/>
 							Every row contains the information for each fruit. <br/>
-							Whenever you check out of a grocery store, the computer that the cashier uses has to access database tables like this one, 
-							and get the info for the food you want to buy.
+							Next we're going to move on to see how we can query data from a database.
 						</aside>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h1 class="heading">Dynamic Imports</h1>
-						<p>
-							Function-like import that allows you to load a module from anywhere
-							in your application code. <br/>Also supports await. 
-						</p>
-						<p class="heading-small">Babel ^7.0, Edge, Chrome, Firefox, TypeScript ^3.2, Node.js 13.2</p>
+						<img class="icon-img" src="images/grid.svg" alt="database table"/>
+						<h1 class="heading">Querying Data</h1>
+						<p class="heading-small">what does it mean to query data?</p>
+						<ul>
+							<li>A query is an instruction that we give to the database</li>
+							<li>Queries are written in a language that the database understands</li>
+							<li>It’s a way for us to communicate with a database and ask it to do stuff with our data</li>
+							<li>Structured Query Language (SQL) is the language commonly used</li>
+						</ul>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></span>
+						<aside class="notes">
+							So, how do we talk to a database and ask it to give us the data we want? The database doesn't understand English. 
+							We can't just type in a command that says "Hi database, can you give me all the records for female kittens 
+							with stripes from your Cats table?" The database
+						</aside>
 					</section>
 					<section>
-						<h3 class="heading">Dynamic Imports</h3>
+						<h3 class="heading">Talking to a Database</h3>
+						<p class="heading-small">the wrong way</p>
+						<p class="txt-mono"><span class="txt-fade">MySQL  localhost:3306 ssl  animalsdata  SQL ></span> Hi database, can you 
+						give me all the records for female kittens with stripes from your cats table?</p>
+						<p>...</p>
+						<p class="txt-mono">ERROR: 1064 (42000): You have an error in your SQL syntax; check the 
+						manual that corresponds to your MySQL server version for the right syntax to use 
+						near 'Hi database, can you give me all the records for female kittens with 
+						stripes from' at line 1</p>
+					</section>
+					<section>
+						<h3 class="heading">Talking to a Database</h3>
+						<p class="heading-small">the right way</p>
+						<p class="txt-mono"><span class="txt-fade">MySQL  localhost:3306 ssl  animalsdata  SQL ></span> \sql SELECT * FROM cats WHERE markings = 'stripes' AND gender = 'female' AND age_months <= 1;</p>
+						<p>...</p>
 						<pre>
 							<code data-trim data-noescape>
-								+----+----------------------------------------------------------------+--------------+---------+
-								| id | product_name                                                   | plu_number   | price   |
-								+----+----------------------------------------------------------------+--------------+---------+
-								|  1 | Passion Fruit                                                  | 3038         |    3.00 |
-								|  2 | Grapefruit                                                     | 3092         |    1.00 |
-								|  3 | Kiwi Fruit                                                     | 4301         |    2.00 |
-								|  4 | Figs                                                           | 3397         |    3.00 |
-								|  5 | Persimmon                                                      | 4492         |    3.00 |
-								+----+----------------------------------------------------------------+--------------+---------+
-								5 rows in set
+								+----+----------+----------+--------+------------+--------+
+								| id | name     | markings | color  | age_months | gender |
+								+----+----------+----------+--------+------------+--------+
+								|  4 | Yoda     | Stripes  | Grey   |          1 | female |
+								|  7 | Gigi     | Stripes  | Orange |          1 | female |
+								| 12 | PingPong | Stripes  | Brown  |          1 | female |
+								| 14 | Regina   | Stripes  | Orange |          1 | female |
+								+----+----------+----------+--------+------------+--------+
+								4 rows in set (0.0004 sec)
 							</code>
 						</pre>
 					</section>
@@ -230,18 +256,15 @@
 					</section>
 					<section>
 						<h3 class="heading">Optional Chaining</h3>
-						<pre>
-							<code data-trim data-noescape>
-								const bookObject = {
-									title: "A title",
-									description: "A description"
-								}
-								
-								const lastName = bookObject.author?.firstName;
 
-								// will be undefined instead of throwing an error
-							</code>
-						</pre>
+						<p class="txt-mono">MySQL  localhost:3306 ssl  animalsdata  SQL > Hi database, can you 
+						give me all the records for female kittens with stripes from your cats table?</p>
+						<p>...</p>
+						<p class="txt-mono">ERROR: 1064 (42000): You have an error in your SQL syntax; check the 
+						manual that corresponds to your MySQL server version for the right syntax to use 
+						near 'Hi database, can you give me all the records for female kittens with 
+						stripes from' at line 1</p>
+
 					</section>
 				</section>
 				<section>

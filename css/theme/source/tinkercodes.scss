@@ -68,10 +68,13 @@ li {
 a, a:link {
     text-decoration: none;
 }
+.reveal pre {box-shadow: none !important;}
 
 .title-author { margin: 35px 0 5px 0 !important;}
 .title-about { margin: 5px 0 !important;}
 
+.txt-mono { font-family: "Lucida Console", "Menlo", "Monaco", "Courier",monospace;}
+.txt-fade { opacity: 0.5}
 .icon-img {
 	opacity: 0.7;
 	height: 110px;
