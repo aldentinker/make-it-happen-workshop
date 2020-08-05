@@ -17,55 +17,126 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1 class="heading">The Best of The New</h1> 
-					<h2>What's good in ES2020, and other newly supported features you may have missed</h2>
+					<img src="images/title.png" height="150" alt="computer"/>
+					<h1 class="heading">Make It Happen With APIs</h1> 
+					<h2>The Great Data Journey <br/>and the awesomeness of APIs</h2>
 					<p class="heading-small">Presented by <a href="https://www.linkedin.com/in/alison-tinker-04b46355/">Alison Tinker</a></p>
 					<p class="heading-small">Software Developer at <a href="https://www.singlestoneconsulting.com/">SingleStone</a></p>
 				</section>
 				<section>
 					<section>
-						<h1 class="heading">ECMAScript 2020</h1>
-						<p class="heading-small">Release status</p>
+						<img class="icon-img" src="images/penguin.svg" alt="penguin"/>
+						<h1 class="heading">Ice Breaker</h1>
+						<p class="heading-small">Let's be awkward together</p>
+						<p>1. Write in the chat: Your name, and three positive words that describe you.</p>
+						<span class="img-attribution">Icon made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a></span>
+					</section>
+					<section>
+						<h1 class="heading">Let's Get Started</h1>
+						<p class="heading-small">Before we begin..</p>
 						<ul>
-							<li>Feature set finalized</li>
-							<li>Approved by TC39 committee</li>
-							<li>Expected to be formally approved by the ECMA general assembly in June</li>
+							<li>Use the Chat to write down questions</li>
+							<li>If you want to ask aloud, use the Raise Your Hand button</li>
+							<li>Need a break? It's OK!</li>
 						</ul>
 					</section>
 					<section>
-						<h1 class="heading">ECMAScript 2020</h1>
-						<p class="heading-small">Can I use?</p>
+						<h1 class="heading">Introduction</h1>
+						<p class="heading-small">Who are you anyway?</p>
 						<ul>
-							<li>Many features are already implemented in popular browsers
+							<li>Hi. I'm Alison.
 							</li>
-							<li>Many features are already supported by Babel and TypeScript
+							<li>I'm a Software Engineer.
 							</li>
-							<li>Check the status of each new feature here: <a href="https://test262.report/features/">https://test262.report/features/</a>
+							<li>When I'm not coding I like gardening and playing video games.
 							</li>
+							<li>Three words that describe me: Persistent, Curious, Bold</li>
 						</ul>
 					</section>
 					<section>
-						<h1 class="heading">ECMAScript 2020</h1>
-						<p class="heading-small">Notable features</p>
+						<h1 class="heading">What's in This Workshop</h1>
+						<p class="heading-small">You'll be learning about...</p>
 						<ul>
-							<li>Promise.allSettled()</li>
-							<li>Optional chaining</li>
-							<li>BigInt</li>
-							<li>Nullish coalescing operator</li>
-							<li>String.matchAll()</li>
-							<li>Dynamic imports</li>
+							<li>Servers & Databases</li>
+							<li>Querying Data</li>
+							<li>Application Programming Interface (API)</li>
+							<li>Fetching Data from API endpoints</li>
 						</ul>
+						<aside class="notes">
+							These are the subjects we'll be covering. Servers, Databases, querying data from databases, APIs, 
+							and fetching data from APIs. There are so many things to learn about these subjects... we're only 
+							going to scratch the surface. But hopefully this workshop will give you enough of a foundation that you'll
+							be interested in learning more about application development... and maybe even consider it as a career. 
+							Trust me, it's a great job!
+							What's NOT in This Workshop: pop-quizzes or tests. You're not going to be quizzed on anything. 
+							We're here today just to learn and make things. So don't worry about having to demonstrate anything.
+							With that said, let's begin at the beginning...
+						</aside>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h1 class="heading">Promise.allSettled()</h1>
-						<p>
-							Asynchronously fulfills each given promise and 
-							returns a promise. Includes an array of objects that describe the outcome of each promise
-							(whether they were resolved or rejected).
-						</p>
-						<p class="heading-small">Babel ^7.0, Edge, Chrome, Firefox, TypeScript ^3.7, Node.js ^12.9</p>
+						<img class="icon-img" src="images/server.svg" alt="server"/>
+						<img class="icon-img" src="images/cloud-server.svg" alt="server"/>
+						<h1 class="heading">Servers</h1>
+						<p class="heading-small">Once upon a time, there was a server.</p>
+						<ul>
+							<li>What is a server?</li>
+							<li>It can be physical or virtual</li>
+							<li>Lives in a server closet, data center, or the cloud</li>
+							<li>There are many different types of servers, like a database server</li>
+						</ul>
+						<aside class="notes">
+							We start off our data journey at the source: the server. You may have heard the term "server" before. But what 
+							does it actually mean? A server can be a physical piece of hardware, like your phone or laptop computer. Physical servers 
+							look similar to the icon you see here. They're typically stored in special closets or data warehouses where they can 
+							be maintained and kept safe.<br/>
+							A server can also be virtual, meaning that it exists on the internet, 
+							spread out across <em>multiple</em> linked servers. This virtual environment of linked servers is what is known as "the cloud." 
+							So whenever you hear someone say "the cloud" in the context of computing, you'll know they're referring to: multiple servers 
+							that are linked together and connected to the internet.<br/>
+						</aside>
+						<span class="img-attribution">Icons  made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> and <a href="https://www.flaticon.com/authors/xnimrodx" title="xnimrodx">xnimrodx</a></span>
+					</section>
+					<section>
+						<img class="icon-img" src="images/db-server.svg" alt="server"/>
+						<h1 class="heading">Database Servers</h1>
+						<p class="heading-small">What do they do??</p>
+						<ul>
+							<li>Used for storing and managing databases</li>
+							<li>Allows authorized users and applications to access databases</li>
+							<li>Can regularly back up data and protect it</li>
+						</ul>
+						<aside class="notes">
+							Since we're taking about data in this workshop, the type of server that WE are interested 
+							in is the database server. A database server contains databases and 
+							gives computers ways to access those databases. You can also configure a database server to perform backups of your databases. 
+							In other words, it will regularly store copies of the databases. That way, if something were to happen to the original, you'd have 
+							a back up to use instead. Like a spare tire for a car. 
+						</aside>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a></span>
+					</section>
+				<section>
+					<section>
+						<h1 class="heading">Databases</h1>
+						<p class="heading-small">First stop, the database.</p>
+						<ul>
+							<li>What is a database?</li>
+							<li>It lives on a server</li>
+							<li>It's made up of tables</li>
+							<li>Like a spreadsheet, it has columns and rows</li>
+							<li>Each column has a name to tell us what data is being stored in it, and it has a data type associated with it</li>
+						</ul>
+						<aside class="notes">
+							These are the subjects we'll be covering. Databases, querying data from databases, APIs, 
+							and fetching data from APIs. There are so many things to learn about these subjects... we're only 
+							going to scratch the surface. But hopefully this workshop will give you enough of a foundation that you'll
+							be interested in learning more about application development... and maybe even consider it as a career. 
+							Trust me, it's a great job! I love my job. 
+							What's NOT in This Workshop: pop-quizzes or tests. You're not going to be quizzed on anything. 
+							We're here today just to learn and make things. So don't worry about having to demonstrate anything.
+							So, let's get into it.
+						</aside>
 					</section>
 					<section>
 						<h3 class="heading">Promise.allSettled()</h3>
