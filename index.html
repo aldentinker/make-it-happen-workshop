@@ -79,10 +79,10 @@
 						<img class="icon-img" src="images/server.svg" alt="server"/>
 						<img class="icon-img" src="images/cloud-server.svg" alt="server"/>
 						<h1 class="heading">Servers</h1>
-						<p class="heading-small">Once upon a time, there was a server.</p>
+						<p class="heading-small">What is a server?</p>
 						<ul>
-							<li>What is a server?</li>
-							<li>It can be physical or virtual</li>
+							<li>It can be a physical device</li>
+							<li>Or it can be virtual</li>
 							<li>Lives in a server closet, data center, or the cloud</li>
 							<li>There are many different types of servers, like a database server</li>
 						</ul>
@@ -121,45 +121,75 @@
 					<section>
 						<img class="icon-img" src="images/database.svg" alt="database"/>
 						<h1 class="heading">Databases</h1>
-						<p class="heading-small">Yummy, yummy data</p>
+						<p class="heading-small">what is a database?</p>
 						<ul>
-							<li>What is a database?</li>
-							<li>It lives on a server</li>
-							<li>It's made up of tables</li>
+							<li>A system that contains a collection of information (data)</li>
+							<li>Lives on a server</li>
+							<li>There are many different kinds of databases</li>
 						</ul>
 						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a></span>
 						<aside class="notes">
-							We've learned about the servers where databases live. But what exactly is a database? 
+							We've learned about the servers where databases live. But what exactly is a database? A database is a system 
+							that contains a structured collection of data. There are lots of different kinds of databases, but the one that we use
+							most frequently in web application development is called a Relational Database.
 						</aside>
 					</section>
 					<section>
-						<img class="icon-img" src="images/table.svg" alt="database table"/>
-						<h1 class="heading">Tables</h1>
-						<p class="heading-small">Columns and row</p>
+						<img class="icon-img" src="images/tables.svg" alt="database"/>
+						<h1 class="heading">Relational Databases</h1>
+						<p class="heading-small">What is a relational database?</p>
 						<ul>
-							<li>A table is like a spreadsheet, it has columns and rows</li>
+							<li>Made up of tables that contain data, like a spreadsheet</li>
+							<li>The tables can be "related" by any data values they share</li>
+						</ul>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> and <a href="https://www.flaticon.com/free-icon/curve-arrow_992697?term=arrow&page=2&position=29" title="dmitri13">dmitri13</a></span>
+						<aside class="notes">
+							Relational data is organized by using tables that contain columns and rows, like a spreadsheet.
+							The tables are related by any data that they share. For example, if you and one of your friends both love playing Minecraft, 
+							you could say you're related by a common interest. <br/>
+							In a similar way, data tables can be related if they share the same data values. 
+						</aside>
+					</section>
+					<section>
+						<img class="icon-img" src="images/grid.svg" alt="database table"/>
+						<h1 class="heading">Tables</h1>
+						<p class="heading-small">Columns and rows</p>
+						<ul>
+							<li>A database table is like a spreadsheet, it has columns and rows</li>
 							<li>Each table column has a name and a data type</li>
+							<li>Each row represents one record of data</li>
+							<li>Every row also has a unique ID</li>
 						</ul>
 						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></span>
 						<aside class="notes">
-							We've learned about the servers where databases live. But what exactly is a database? 
+							Data tables should look familiar to you if you've ever used a spreadsheet, or used tables for organizing data 
+							in math and science. They have columns that have names and a data type associated with them. And they also
+							have rows. Each row in a table represents a set of data, and has a unique ID to distinguish it from all the other rows.
 						</aside>
 					</section>
 					<section>
-						<h3 class="heading">Database Table</h3>
+						<h3 class="heading">Table Data</h3>
 						<pre>
 							<code data-trim data-noescape>
-								+--------------+------------------+------+-----+---------+----------------+
-								| Field        | Type             | Null | Key | Default | Extra          |
-								+--------------+------------------+------+-----+---------+----------------+
-								| id           | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-								| product_name | varchar(255)     | NO   |     | NULL    |                |
-								| plu_number   | varchar(9)       | NO   |     | NULL    |                |
-								| price        | decimal(4,2)     | NO   |     | NULL    |                |
-								+--------------+------------------+------+-----+---------+----------------+
-								4 rows in set (0.0228 sec)
+								+----+------------------------+--------------+---------+
+								| id | product_name           | plu_number   | price   |
+								+----+------------------------+--------------+---------+
+								|  1 | Passion Fruit          | 3038         |    3.00 |
+								|  2 | Grapefruit             | 3092         |    1.00 |
+								|  3 | Kiwi Fruit             | 4301         |    2.00 |
+								|  4 | Figs                   | 3397         |    3.00 |
+								|  5 | Persimmon              | 4492         |    3.00 |
+								+----+------------------------+--------------+---------+
+								5 rows in set
 							</code>
 						</pre>
+						<aside class="notes">
+							This is an example of what a relational database table looks like. This table is used for storing information about 
+							different fruits that you can buy in the grocery store. As you can see, there are 4 columns: ID, product name, PLU number, and price.
+							Every row contains the information for each fruit. <br/>
+							Whenever you check out of a grocery store, the computer that the cashier uses has to access database tables like this one, 
+							and get the info for the food you want to buy.
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -175,15 +205,16 @@
 						<h3 class="heading">Dynamic Imports</h3>
 						<pre>
 							<code data-trim data-noescape>
-								+--------------+------------------+------+-----+---------+----------------+
-								| Field        | Type             | Null | Key | Default | Extra          |
-								+--------------+------------------+------+-----+---------+----------------+
-								| id           | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-								| name         | varchar(255)     | NO   |     | NULL    |                |
-								| coursenumber | varchar(9)       | NO   |     | NULL    |                |
-								| credits      | decimal(4,2)     | NO   |     | NULL    |                |
-								+--------------+------------------+------+-----+---------+----------------+
-								4 rows in set (0.0228 sec)
+								+----+----------------------------------------------------------------+--------------+---------+
+								| id | product_name                                                   | plu_number   | price   |
+								+----+----------------------------------------------------------------+--------------+---------+
+								|  1 | Passion Fruit                                                  | 3038         |    3.00 |
+								|  2 | Grapefruit                                                     | 3092         |    1.00 |
+								|  3 | Kiwi Fruit                                                     | 4301         |    2.00 |
+								|  4 | Figs                                                           | 3397         |    3.00 |
+								|  5 | Persimmon                                                      | 4492         |    3.00 |
+								+----+----------------------------------------------------------------+--------------+---------+
+								5 rows in set
 							</code>
 						</pre>
 					</section>
