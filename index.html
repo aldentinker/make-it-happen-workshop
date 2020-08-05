@@ -186,49 +186,42 @@
 						<aside class="notes">
 							This is an example of what a relational database table looks like. This table is used for storing information about 
 							different fruits that you can buy in the grocery store. Whenever you check out of a grocery store, the computer that 
-							the cashier uses has to access information from database tables like this one.<br/>
+							the cashier uses will access information from database tables like this one.<br/>
 							As you can see, there are 5 rows of data and 4 columns: ID, product name, PLU number, and price.
-							When we create a table we have to give each column a name and say what data type we want it to store. 
-							For example, the product name column has a data type called 'variable character' or VarChar for shirt. This data type is 
+							When we create a table we have to give each column a name and say what type of data we want it to store. 
+							For example, the product name column has a data type called 'variable character' or VarChar for short. This data type is 
 							used for storing text characters that can vary in length. The ID column has an integer data type, which is used for storing numbers. <br/>
-							Every row contains the information for each fruit. <br/>
+							And, as you can see, every row contains the information for each fruit. <br/>
 							Next we're going to move on to see how we can query data from a database.
 						</aside>
 					</section>
 				</section>
 				<section>
 					<section>
-						<img class="icon-img" src="images/grid.svg" alt="database table"/>
-						<h1 class="heading">Querying Data</h1>
-						<p class="heading-small">what does it mean to query data?</p>
-						<ul>
-							<li>A query is an instruction that we give to the database</li>
-							<li>Queries are written in a language that the database understands</li>
-							<li>It’s a way for us to communicate with a database and ask it to do stuff with our data</li>
-							<li>Structured Query Language (SQL) is the language commonly used</li>
-						</ul>
-						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></span>
+						<h3 class="heading">Talking to a Database</h3>
+						<p class="heading-small">the wrong way</p>
+						<p class="txt-mono">Hi database, can you 
+						look in the cats table and give me all the records for female kittens that have stripes?</p>
+						<p>...</p>
+						<p class="txt-mono">ERROR: 1064 (42000): You have an error in your SQL syntax; check the 
+						manual that corresponds to your MySQL server version for the right syntax to use 
+						near 'Hi database, can you look in the cats table and give me all the records for' at line 1</p>
 						<aside class="notes">
-							So, how do we talk to a database and ask it to give us the data we want? The database doesn't understand English. 
-							We can't just type in a command that says "Hi database, can you give me all the records for female kittens 
-							with stripes from your Cats table?" The database
+							So, how do we talk to a database and ask it to give us the data we want? The database doesn't understand plain English. 
+							We can't just type in a command that says "Hi database, can you look in the cats table and give me all the records 
+							for female kittens that have stripes?" <br/> If we do that, we'll get an error back from the database, and it will ask us to use
+							proper SQL syntax, which is what it <em>does</em> understand. So let's see what a real SQL query looks like...
 						</aside>
 					</section>
 					<section>
 						<h3 class="heading">Talking to a Database</h3>
-						<p class="heading-small">the wrong way</p>
-						<p class="txt-mono"><span class="txt-fade">MySQL  localhost:3306 ssl  animalsdata  SQL ></span> Hi database, can you 
-						give me all the records for female kittens with stripes from your cats table?</p>
-						<p>...</p>
-						<p class="txt-mono">ERROR: 1064 (42000): You have an error in your SQL syntax; check the 
-						manual that corresponds to your MySQL server version for the right syntax to use 
-						near 'Hi database, can you give me all the records for female kittens with 
-						stripes from' at line 1</p>
-					</section>
-					<section>
-						<h3 class="heading">Talking to a Database</h3>
 						<p class="heading-small">the right way</p>
-						<p class="txt-mono"><span class="txt-fade">MySQL  localhost:3306 ssl  animalsdata  SQL ></span> \sql SELECT * FROM cats WHERE markings = 'stripes' AND gender = 'female' AND age_months <= 1;</p>
+						<pre>
+							<code data-trim data-noescape>
+								SELECT * FROM cats WHERE markings = 'stripes' AND 
+								gender = 'female' AND age_months <= 6;
+							</code>
+						</pre>
 						<p>...</p>
 						<pre>
 							<code data-trim data-noescape>
@@ -236,13 +229,40 @@
 								| id | name     | markings | color  | age_months | gender |
 								+----+----------+----------+--------+------------+--------+
 								|  4 | Yoda     | Stripes  | Grey   |          1 | female |
-								|  7 | Gigi     | Stripes  | Orange |          1 | female |
+								|  7 | Gigi     | Stripes  | Orange |          2 | female |
 								| 12 | PingPong | Stripes  | Brown  |          1 | female |
-								| 14 | Regina   | Stripes  | Orange |          1 | female |
+								| 14 | Regina   | Stripes  | Orange |          3 | female |
 								+----+----------+----------+--------+------------+--------+
 								4 rows in set (0.0004 sec)
 							</code>
 						</pre>
+						<aside class="notes">
+							What you see here is an example of a SQL query that we can give to the database. 
+							SQL stands for Structured Query Language, and it's the most commonly used language 
+							that software developers use to communicate with databases. SQL queries are written instructions that we give
+							to a databases to tell it what to do with the data. In this case we're telling it to SELECT some data for us. <br/>
+							Specifically, we want it to select all the values in rows of the cats table where the cat's markings equal 'stripes', 
+							and the cat's gender equals 'female' and the cat's age in months is less than or equal to 6.<br/>
+							Let's review all that real quick..
+						</aside>
+					</section>
+					<section>
+						<img class="icon-img" src="images/sql.svg" alt="database table"/>
+						<h1 class="heading">Querying Data</h1>
+						<p class="heading-small">what does it mean to query data?</p>
+						<ul>
+							<li>A query is an instruction that we give to the database</li>
+							<li>Queries are written in a language that the database understands</li>
+							<li>Structured Query Language (SQL) is the language most software developers use</li>
+							<li>Queries allow us to tell the database to do stuff with our data</li>
+						</ul>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a>></span>
+						<aside class="notes">
+							We've learned that a query is an instruction that we give to the database, <br/>
+							in a language that the database understands, called SQL. 
+							These queries allow us to communicate with the database and tell 
+							it to do certain things with our data... like selecting, creating, updating, or deleting data. 
+						</aside>
 					</section>
 				</section>
 				<section>
