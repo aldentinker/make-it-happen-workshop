@@ -17,11 +17,11 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<img src="images/title.png" height="150" alt="computer"/>
+					<img class="icon-img-title" src="images/apis.svg" height="150" alt="application"/>
 					<h1 class="heading">Make It Happen With APIs</h1> 
 					<h2>The Great Data Journey <br/>and the awesomeness of APIs</h2>
-					<p class="heading-small">Presented by <a href="https://www.linkedin.com/in/alison-tinker-04b46355/">Alison Tinker</a></p>
-					<p class="heading-small">Software Developer at <a href="https://www.singlestoneconsulting.com/">SingleStone</a></p>
+					<p class="heading-small title-author">Presented by <a href="https://www.linkedin.com/in/alison-tinker-04b46355/">Alison Tinker</a></p>
+					<p class="heading-small title-about">Software Developer at <a href="https://www.singlestoneconsulting.com/">SingleStone</a></p>
 				</section>
 				<section>
 					<section>
@@ -111,66 +111,53 @@
 							Since we're taking about data in this workshop, the type of server that WE are interested 
 							in is the database server. A database server contains databases and 
 							gives computers ways to access those databases. You can also configure a database server to perform backups of your databases. 
-							In other words, it will regularly store copies of the databases. That way, if something were to happen to the original, you'd have 
-							a back up to use instead. Like a spare tire for a car. 
+							In other words, it will regularly store copies of the databases. That way, if something were to happen to the original database, you'd have 
+							a back up to use instead. Like a spare tire for a car. Now, onto the databases themselves...
 						</aside>
 						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/phatplus" title="phatplus">phatplus</a></span>
 					</section>
+				</section>
 				<section>
 					<section>
+						<img class="icon-img" src="images/database.svg" alt="database"/>
 						<h1 class="heading">Databases</h1>
-						<p class="heading-small">First stop, the database.</p>
+						<p class="heading-small">Yummy, yummy data</p>
 						<ul>
 							<li>What is a database?</li>
 							<li>It lives on a server</li>
 							<li>It's made up of tables</li>
-							<li>Like a spreadsheet, it has columns and rows</li>
-							<li>Each column has a name to tell us what data is being stored in it, and it has a data type associated with it</li>
 						</ul>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a></span>
 						<aside class="notes">
-							These are the subjects we'll be covering. Databases, querying data from databases, APIs, 
-							and fetching data from APIs. There are so many things to learn about these subjects... we're only 
-							going to scratch the surface. But hopefully this workshop will give you enough of a foundation that you'll
-							be interested in learning more about application development... and maybe even consider it as a career. 
-							Trust me, it's a great job! I love my job. 
-							What's NOT in This Workshop: pop-quizzes or tests. You're not going to be quizzed on anything. 
-							We're here today just to learn and make things. So don't worry about having to demonstrate anything.
-							So, let's get into it.
+							We've learned about the servers where databases live. But what exactly is a database? 
 						</aside>
 					</section>
 					<section>
-						<h3 class="heading">Promise.allSettled()</h3>
-						<pre>
-							<code data-trim data-noescape >
-								getProjects = () => {
-									const promise1 = getProjectById(94236)
-									const promise2 = getProjectById(95084)
-									const promise3 = getProjectById(10603)
-									const promise4 = getProjectById(90000000000) // invalid ID
-
-									const promises = [promise1, promise2, promise3, promise4]
-							
-									Promise.allSettled(promises).then(results => {
-										let fulfilledResults = 
-											results.filter(r => r.status === 'fulfilled');
-
-										console.log(results)
-									});
-								};
-							</code>
-						</pre>
+						<img class="icon-img" src="images/table.svg" alt="database table"/>
+						<h1 class="heading">Tables</h1>
+						<p class="heading-small">Columns and row</p>
+						<ul>
+							<li>A table is like a spreadsheet, it has columns and rows</li>
+							<li>Each table column has a name and a data type</li>
+						</ul>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></span>
+						<aside class="notes">
+							We've learned about the servers where databases live. But what exactly is a database? 
+						</aside>
 					</section>
 					<section>
-						<h3 class="heading">Promise.allSettled()</h3>
-						<p class="heading-small">Output</p>
+						<h3 class="heading">Database Table</h3>
 						<pre>
 							<code data-trim data-noescape>
-							[
-								0: {status: "fulfilled", value: {…}}
-								1: {status: "fulfilled", value: {…}}
-								2: {status: "fulfilled", value: {…}}
-								3: {status: "rejected", reason: Error: Not Found...
-							]
+								+--------------+------------------+------+-----+---------+----------------+
+								| Field        | Type             | Null | Key | Default | Extra          |
+								+--------------+------------------+------+-----+---------+----------------+
+								| id           | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+								| product_name | varchar(255)     | NO   |     | NULL    |                |
+								| plu_number   | varchar(9)       | NO   |     | NULL    |                |
+								| price        | decimal(4,2)     | NO   |     | NULL    |                |
+								+--------------+------------------+------+-----+---------+----------------+
+								4 rows in set (0.0228 sec)
 							</code>
 						</pre>
 					</section>
@@ -188,12 +175,15 @@
 						<h3 class="heading">Dynamic Imports</h3>
 						<pre>
 							<code data-trim data-noescape>
-								import('../../config.json').then(module => {
-								  // do something with module
-								})
-								.catch(err => {
-								  console.log(err.message  );
-								});
+								+--------------+------------------+------+-----+---------+----------------+
+								| Field        | Type             | Null | Key | Default | Extra          |
+								+--------------+------------------+------+-----+---------+----------------+
+								| id           | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+								| name         | varchar(255)     | NO   |     | NULL    |                |
+								| coursenumber | varchar(9)       | NO   |     | NULL    |                |
+								| credits      | decimal(4,2)     | NO   |     | NULL    |                |
+								+--------------+------------------+------+-----+---------+----------------+
+								4 rows in set (0.0228 sec)
 							</code>
 						</pre>
 					</section>
