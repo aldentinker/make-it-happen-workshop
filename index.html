@@ -283,7 +283,7 @@
 					</section>
 					<section>
 						<img class="icon-img" src="images/sql.svg" alt="database table"/>
-						<h1 class="heading">Querying Data</h1>
+						<h3 class="heading">Querying Data</h3>
 						<p class="heading-small">what does it mean to query data?</p>
 						<ul>
 							<li>A query is an instruction that we give to the database</li>
@@ -300,32 +300,37 @@
 						</aside>
 					</section>
 					<section>
-						<img class="icon-img" src="images/sql.svg" alt="database table"/>
-						<h1 class="heading">Querying Exercise</h1>
+						<h3 class="heading">Querying Exercise</h3>
 						<p class="heading-small">let's query some data!</p>
 						<ol>
-							<li>Go to this link: <a href="https://www.db-fiddle.com/f/hE57VcQbzx4KDzZMMEf2yF/0" target="_blank" rel="noopener noreferrer">https://www.db-fiddle.com/f/hE57VcQbzx4KDzZMMEf2yF/0</a></li>
+							<li>Go to this link: <a href="https://www.db-fiddle.com/f/hE57VcQbzx4KDzZMMEf2yF/9" target="_blank" rel="noopener noreferrer">https://www.db-fiddle.com/f/hE57VcQbzx4KDzZMMEf2yF/9</a></li>
 							<li>Click the link that says 'Fork' in the top nav bar</li>
 							<li>Click the link that says 'Run' in the top nav bar</li>
-							<li>Paste this on the left side at the bottom of the text:<br/>
-								<span class="txt-mono">INSERT INTO favorite_foods (id, food_name, food_description) VALUES (3, 'avocados', 'delicious in a salad.');</span>
+							<li>This is a SQL statement that inserts new data into the favorite_foods table:<br/>
+								<span class="txt-mono">INSERT INTO favorite_foods (id, food_name, food_description) VALUES (3, 'avocado', 'delicious in a salad.');</span>
 							</li>
-							<li>Structured Query Language (SQL) is the language most software developers use</li>
-							<li>Queries allow us to tell the database to do stuff with our data</li>
+							<li>This is a query that retrieves the avocado record from the favorite_foods table:<br/>
+								<span class="txt-mono">SELECT * FROM favorite_foods WHERE food_name = 'avocado';</span>
+							</li>
 						</ol>
-						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/smartline" title="Smartline">Smartline</a></span>
 						<aside class="notes">
-							Now we're actually going to write some SQL queries! I'm pasting a link into the chat that you can copy and paste into a new browser tab.
+							Now we're actually going to write some SQL! I'm pasting a link into the chat that you can copy and paste into a new browser tab.
 							It should open up to this view of a site where we can practice writing SQL queries... and it will 
 							simulate getting data from a real database. I'll give everyone a minute to make sure we're all on the same page.<br/>
 							Now, once you're ready, click on the link at the top that says 'Fork'. This will give you a copy of the original page, and this will allow you
 							to make changes without affecting the original page. You can always go back to the original link I posted 
 							and make another fork if you want to start over.<br/>
-							Ok, so now that you all have a forked copy, let's look over here on the left side. We have some SQL commands. 
-							These commands create 2 new database tables, and insert data into those tables. On the right side we have the SQL query that 
-							selects the data and returns it to us. So, let's try inserting some new data and then querying it. <br/>
-
-
+							Ok, so now that you all have a forked copy, let's look over here on the left side. We have some SQL statements. 
+							These statements create 2 new database tables, and then these statements insert data into those tables. On the right side we have the SQL query that 
+							selects the data and returns it to us. <br>
+							Let's try running the program and see what happens. As you can see, it returns the data that we've asked for. This statement is saying "Give me
+							all the data in the favorite_foods table." And that's exactly what it did.
+							So, let's try inserting some new data and then querying it. <br/>
+							Go to the last statement and replace the word 'avocado' with a different food. And replace the description that says 'delicious in a salad'
+							with a different description. Make sure to keep the single quotes around the values. Now, click Run again. You should see your new food appear in the chart.<br/>
+							Now, let's change our query to get only the food that we just added. All we have to do is add on to the query we already have.
+							We want to add the following: WHERE food_name = 'avocado'.
+							Then hit Run again, you should now see only the new food that you added to the table. Congrats on writing your first SQL query!
 						</aside>
 					</section>
 				</section>

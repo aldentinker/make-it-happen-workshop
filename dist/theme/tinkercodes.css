@@ -39,7 +39,8 @@ a, a:link {
 .txt-mono {
   font-family: "Lucida Console", "Menlo", "Monaco", "Courier",monospace;
   margin: 15px 0;
-  display: inline-block; }
+  display: inline-block;
+  color: #969696; }
 
 .txt-fade {
   opacity: 0.5; }
