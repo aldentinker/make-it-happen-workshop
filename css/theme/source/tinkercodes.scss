@@ -73,7 +73,11 @@ a, a:link {
 .title-author { margin: 35px 0 5px 0 !important;}
 .title-about { margin: 5px 0 !important;}
 
-.txt-mono { font-family: "Lucida Console", "Menlo", "Monaco", "Courier",monospace;}
+.txt-mono { 
+	font-family: "Lucida Console", "Menlo", "Monaco", "Courier",monospace;
+	margin: 15px 0;
+    display: inline-block;
+}
 .txt-fade { opacity: 0.5}
 .icon-img {
 	opacity: 0.8;
@@ -93,6 +97,9 @@ a, a:link {
     display: block;
     margin: 60px 0 0 0;
     opacity: 0.5;
+}
+.img-attribution a {
+	color: #999999 !important;
 }
 
 .left-p {text-align: left;}
