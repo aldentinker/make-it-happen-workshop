@@ -391,138 +391,48 @@
 						
 					</section>
 					<section>
-						<img class="icon-img" src="images/api.svg" alt="data journey"/>
-						<h1 class="heading">API Examples</h1>
-						<p class="heading-small">try it out</p>
+						<img class="icon-img" src="images/cat.svg" alt="data journey"/>
+						<h3 class="heading">API Exercise</h3>
+						<p class="heading-small">Part 1</p>
 						<ol>
-							<li>Github API endpoint: <a href="https://api.github.com/users/alitinker" target="_blank" rel="noopener noreferrer">https://api.github.com/users/alitinker</a></li>
-							<li>Petstore API: <a href="https://petstore.swagger.io/" target="_blank" rel="noopener noreferrer">https://petstore.swagger.io/</a></li>
+							<li>Go to: <a href="https://petstore.swagger.io/" target="_blank" rel="noopener noreferrer">https://petstore.swagger.io/</a></li>
+							<li>Click on the green section under 'pet' that says 'POST /pet Add a new pet to the store'</li>
+							<li>Click on the button to the right that says 'Try it out'</li>
+							<li>In the white box, change the word "doggie" to another name... like "Toto" (keep it in quotes)</li>
+							<li>Change the word "available" to "adopted"</li>
+							<li>Click on the blue button that says "Execute"</li>
+							<li>Scroll down and you will see a black box with the response from the API</li>
 						</ol>
-						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a></span>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/ultimatearm" title="ultimatearm">ultimatearm</a></span>
 						<aside class="notes">
-							Let's look at some examples of APIs.
-							The first is a very simple example of an API endpoint 
-							that returns info about a github user's account. Github is a website that programmers use to store code. And this is 
-							my username that's part of the URL. If we click the URL, we get raw data returned from the API. This raw data is called JSON. It shows all the public information 
-							from my account. If we were to put another github user's name at the end of this URL, it would return the info about their account too.<br/>
-							The next example is a Petstore API created by a company called Swagger. They created this API to show how easy it is to use APIs with
-							an interface that they built. 
+							Let's look at an example of an API. This is a Petstore API created by a company called Swagger. They created this API to 
+							show how easy it is to use APIs with an interface that they built. I'm going to demonstrate how to add data using this API, and then show
+							how to get it, just like we've been doing. Then you're going to try. This is part one.
+						</aside>
+					</section>
+					<section>
+						<img class="icon-img" src="images/cat.svg" alt="data journey"/>
+						<h3 class="heading">API Exercise</h3>
+						<p class="heading-small">Part 2</p>
+						<ol>
+							<li>Scroll down</li>
+							<li>Click on the blue section under 'pet' that says GET /pet/{petID}</li>
+							<li>Click on the button to the right that says 'Try it out'</li>
+							<li>Paste the ID that you copied into the form field</li>
+							<li>Click the 'Execute' button</li>
+							<li>Click on the blue button that says "Execute"</li>
+							<li>You should see the pet that you added to the store</li>
+						</ol>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/ultimatearm" title="ultimatearm">ultimatearm</a></span>
+						<aside class="notes">
+							Now we move to part 2. We're going to get the data that we just added. 
 						</aside>
 					</section>
 				</section>
-				<section>
-					<section>
-						<h1 class="heading">String.matchAll()</h1>
-						<p>
-							A new method attached to the String object that returns an iterator
-							of all results from matching a string against a regexp. 
-							It will also provide the matches captured for named groups.
-						</p>
-						<p class="heading-small">Babel ^7.0, Edge, Chrome, Firefox, TypeScript ^3.7, Node.js 12</p>
-					</section>
-					<section>
-						<h3 class="heading">String.matchAll()</h3>
-						<pre>
-							<code data-trim data-noescape>
-							let dateString = '1910-May-09 09:05, 2020-June-12 11:05';
 
-							let regexpDateFormat = 
-								/(?&lt;year>\d{4})-(?&lt;month>\w+)-(?&lt;day>\d{2}) (?&lt;time>\d{2}:\d{2})/gu;
-					
-							let array = Array.from(dateString.matchAll(regexpDateFormat));
-
-							console.log(array[0]);
-							</code>
-						</pre>
-					</section>
-					<section>
-						<h3 class="heading">String.matchAll()</h3>
-						<p class="heading-small">Output</p>
-						<pre>
-							<code data-trim data-noescape>
-								[
-									0: "1910-May-09 09:05",
-									1: "1910",
-									2: "May",
-									3: "09",
-									4: "09:05",
-									groups: {year: "1910", month: "May", day: "09", time: "09:05"},
-									index: 0,
-									input: "1910-May-09 09:05, 2020-June-12 11:05",
-									length: 5
-								]
-							</code>
-						</pre>
-					</section>
-				</section>
 				<section>
-					<section>
-						<h1 class="heading">Big Int</h1>
-						<p>
-							A new primitive that can represent arbitrary large numbers
-							greater than 2^53, <br/>which is the max safe integer for a Number primitive. 
-						</p>
-						<p class="heading-small">Babel ^7.0*, Edge, Chrome, Firefox, TypeScript ^3.2, Node.js</p>
-						<p class="notes">*Babel does not support BigInt exponentiation</p>
-					</section>
-					<section>
-						<h3 class="heading">Big Int</h3>
-						<pre>
-							<code data-trim data-noescape>
-								// The letter n is appended to distinguish it as a BigInt
-								const someBigInt = 340n;
-								
-								// A Number can be converted to a BigInt
-								const someNumber = 467;
-								const someBigInt = BigInt(someNumber);
-							</code>
-						</pre>
-					</section>
-					<section>
-						<h3 class="heading">Big Int</h3>
-						<pre>
-							<code data-trim data-noescape>
-							// The exoplanet kepler-150 is a distance of 914 parsecs
-							let distanceInParsecs = 914n;
-							
-							// 1 parsec = aprox 31 trillion km (31000000000000)
-							let parsecToKm = 10n ** 12n * 31n; 
-							
-							let distanceInKm = distanceInParsecs * parsecToKm;
-
-							console.log(distanceInKm);
-
-							// Output: 28334000000000000n
-							</code>
-						</pre>
-					</section>
-				</section>
-				<section>
-					<section>
-						<h1 class="heading">What else is there?</h1>
-						<p class="heading-small">Other new JS features</p>
-						<ul>
-							<li>ES2020: <a href="https://github.com/tc39/proposal-import-meta">import.meta</a></li>
-							<li>ES2020: <a href="https://github.com/tc39/proposal-global">globalThis</a></li>
-							<li>ES2021: <a href="https://github.com/tc39/proposal-string-replaceall">String.replaceAll()</a></li>
-						</ul>
-					</section>
-					<section>
-						<h1 class="heading">What else is there?</h1>
-						<p class="heading-small">Experimental Web APIs</p>
-						<ul>
-							<li>Some support: <a href="https://www.w3.org/TR/2020/WD-gamepad-20200225/">GamePad</a></li>
-							<li>Mostly supported: <a href="https://www.w3.org/TR/2020/WD-push-api-20200204/">Push API</a></li>
-							<li>Mostly supported: <a href="https://wicg.github.io/netinfo/">Network Information API</a></li>
-							<li>Firefox only: <a href="https://w3c.github.io/proximity/">Proximity Sensor</a></li>
-							<li>Some support: <a href="https://w3c.github.io/longtasks/">Long Tasks API</a></li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<h1 class="heading">Thanks for watching!</h1>
-					<p class="heading-small">That's all folks</p>
-					<p><a href="https://alitinker.github.io/best-of-the-new-slides/#/">alitinker.github.io/best-of-the-new-slides</a></p>
+					<h1 class="heading">The End</h1>
+					<p class="heading-small">Thank you for your participation!</p>
 				</section>
 			</div>
 		</div>
