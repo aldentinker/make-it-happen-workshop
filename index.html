@@ -307,10 +307,13 @@
 								<span class="txt-mono">SELECT * FROM favorite_foods WHERE food_name = 'your food name here'</span>
 							</li>
 							<li>Click 'Run' again!</li>
+							<li>Bonus: try adding more data and/or changing your query to see what happens.</li>
 						</ol>
 						<aside class="notes">
-							Now we're actually going to write some SQL! What I'm going to do is demonstrate what you'll be doing, and then we
-							can all go into break out rooms and you can try for yourselves. I'll post the instructions in the chat so you can refer back to them.<br/>
+							Now we're actually going to write some SQL! We're goin gto do this in an online app that simulates
+							a database and provides an interface for making data queries.<br/>
+							What I'm going to do is demonstrate the exercise, and then we
+							can all go into break out rooms and you can try it for yourselves. I'll post the instructions in the chat so you can refer back to them.<br/>
 							I'm going to go to this link, and click on the link at the top that says 'Fork'. This will give you a copy of the original page, and this will allow you
 							to make changes without affecting the original page. You can always go back to the original link I posted 
 							and make another fork if you want to start over.<br/>
@@ -324,7 +327,8 @@
 							with a different description. Make sure to keep the single quotes around the values. Now, click Run again. You should see your new food appear in the chart.<br/>
 							Now, let's change our query to get only the food that we just added. All we have to do is add on to the query we already have.
 							We want to add the following: WHERE food_name = 'avocado'.
-							Then hit Run again, you should now see only the new food that you added to the table. Congrats on writing your first SQL query!
+							Then hit Run again, you should now see only the new food that you added to the table. Ok, now that I've done it, I want you guys to try it.
+							We're going to go into break out rooms now. I'll pop in at some point and see how you're getting on, and see if you have any questions.
 						</aside>
 					</section>
 				</section>
@@ -352,10 +356,10 @@
 
 						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></span>
 						<aside class="notes">
-							We've learned that a query is an instruction that we give to the database, <br/>
-							in a language that the database understands, called SQL. 
-							These queries allow us to communicate with the database and tell 
-							it to do certain things with our data... like selecting, creating, updating, or deleting data. 
+							Now's a good time to take a quick break for questions. I'm going to go through some of the chat questions, if there are any.
+							If we have time after that, we can open up the floor to anyone who wants to ask questions aloud.
+							You should signal that you want to ask a question aloud by using the raise your hand button, and then someone will unmute you.
+							Or you can just continue to ask questions via the chat. 
 						</aside>
 					</section>
 				</section>
@@ -379,8 +383,12 @@
 							An application makes a request to the API for some data, the API fetches the data from the database, and then returns it to those applications. 
 							This allows companies like Facebook and Instagram to control what data people can have access to, and to control what they can do with that data.
 							Often, it will also act like a translator between the database and other applications, because it can format the data into a structure that’s easier for other applications to use. 
-							Let's look at some examples of APIs.
+							Next we're going to watch a quick video that uses a really good analogy to describe what an API does.
 						</aside>
+					</section>
+					<section data-background-iframe="https://www.youtube.com/embed/s7wmiS2mSXY?start=64"
+					data-background-interactive>
+						
 					</section>
 					<section>
 						<img class="icon-img" src="images/api.svg" alt="data journey"/>
@@ -392,9 +400,10 @@
 						</ol>
 						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a></span>
 						<aside class="notes">
-							Here we have 2 different examples of APIs. The first is a very simple example of an API endpoint 
+							Let's look at some examples of APIs.
+							The first is a very simple example of an API endpoint 
 							that returns info about a github user's account. Github is a website that programmers use to store code. And this is 
-							my username that's part of the URL. If we click the URL, we get raw data returned from the API. It shows all the public information 
+							my username that's part of the URL. If we click the URL, we get raw data returned from the API. This raw data is called JSON. It shows all the public information 
 							from my account. If we were to put another github user's name at the end of this URL, it would return the info about their account too.<br/>
 							The next example is a Petstore API created by a company called Swagger. They created this API to show how easy it is to use APIs with
 							an interface that they built. 
