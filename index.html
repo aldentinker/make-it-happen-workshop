@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+		<link rel="icon" type="image/png" href="images/favicon.png" />
 		<title>Make It Happen With APIs</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
@@ -17,6 +17,22 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
+					<img class="icon-img" src="images/penguin.svg" alt="penguin"/>
+					<h1 class="heading">Ice Breaker</h1>
+					<p class="heading-small">Let's chill together</p>
+					<p>Write in the chat: <br/>Your name, and three positive words that describe you.</p>
+					<p>Example: <br/>"I'm Alison, and I'm persistent, curious, and bold."</p>
+					<span class="img-attribution">Icon made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a></span>
+					<aside class="notes">
+						Before we get going, we're going to do a quick little ice breaker. And we're going to use the chat box for this. 
+						If everyone could write in the chat your first name, along with three positive words to describe yourself. Like... funny.. or brave.
+						This is a great exercise whenever you need a little boost of confidence. We all can get a little down on ourselves
+						from time to time. And one way to pick yourself up is to write down some things you've accomplished that you're proud of, or 
+						some postive traits you have, to remind yourself of your good qualities and the things you're capable of doing.<br/>
+						Some nice adjectives go a long way! Great job everyone.
+					</aside>
+				</section>
+				<section>
 					<img class="icon-img-title" src="images/apis.svg" height="150" alt="application"/>
 					<h1 class="heading">Make It Happen With APIs</h1> 
 					<h2>The Great Data Journey <br/>and the awesomeness of APIs</h2>
@@ -27,32 +43,46 @@
 						Awesomeness of APIs. I'm Alison Tinker, I'm a software developer at SingleStone, and I'm going to be your guide on
 						this little data adventure we're embarking on today. First, I want to thank you all for being here. I think it's 
 						fantastic that you're taking time out of your week to participate in this wonderful conference. And I really hope you've enjoyed
-						your other workshops so far. I especially hope you enjoy this one.
+						your other workshops so far. I especially hope you enjoy this one.<br/>
+						We'll be covering a lot of subjects today: Servers, Databases, querying data, APIs, 
+						and fetching data from APIs. There are so many things to learn about these subjects... we're only 
+						going to scratch the surface. But hopefully this workshop will give you enough of a foundation that you'll
+						be interested in learning more about application development... and maybe even consider it as a career. <br/>
+					</aside>
+				</section>
+				<section>
+					<img class="icon-img" src="images/hello.svg" alt="hello"/>
+					<h1 class="heading">Introduction</h1>
+					<p class="heading-small">Who are you anyway?</p>
+					<ul>
+						<li>Hi, I'm Alison!
+						</li>
+						<li>I'm a Software Engineer.
+						</li>
+						<li>When I'm not coding I like gardening and playing video games.
+						</li>
+					</ul>
+					<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></span>
+					<aside class="notes">
+						Just want to briefly introduce myself before moving on. Because I think it might be helpful 
+						for you to know a little bit about my background. Before I became a software engineer, I was a graphic designer. I made pretty pictures for magazines
+						and websites. <br/>
+						I actually went to art school, instead of going to a technical school. I don't have a degree in Computer Science. Actually, 
+						a lot of my fellow software engineers don't have computer science degrees either, and many of us came from different educational backgrounds.<br/>
+						I tell you this because I think most people believe that you need to be good at math and science in order to get a job in
+						technology... but that's simply not true. I really hated math when I was in school and I didn't think I was very good at it. That's why I went to art school.
+						But I fell in love with computer programming and decided to make a career change. So, all of this is to say... even if you don't think
+						you're very good at math or science, you can still be a computer programmer. And if I can do it, YOU can do it.
 					</aside>
 				</section>
 				<section>
 					<section>
-						<img class="icon-img" src="images/penguin.svg" alt="penguin"/>
-						<h1 class="heading">Ice Breaker</h1>
-						<p class="heading-small">Let's chill together</p>
-						<p>Write in the chat: Your name, and three positive words that describe you.</p>
-						<p>Example: "I'm Alison, and I'm persistent, curious, and bold."</p>
-						<span class="img-attribution">Icon made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a></span>
-						<aside class="notes">
-							Before we get going, we're going to do a quick little ice breaker. And we're going to use the chat box for this. 
-							If everyone could write in the chat your first name, along with three positive words to describe yourself. Like... funny.. or brave.
-							This is a great exercise whenever you need a little boost of confidence. We all can get a little down on ourselves
-							from time to time. And one way to pick yourself up is to write down some things you've accomplished that you're proud of, or 
-							some postive traits you have, to remind yourself of your good qualities and the things you're capable of doing.<br/>
-							Some nice adjectives go a long way! Great job everyone.
-						</aside>
-					</section>
-					<section>
 						<h1 class="heading">Let's Get Started</h1>
-						<p class="heading-small">Before we begin..</p>
+						<p class="heading-small">Before we begin...</p>
 						<ul>
-							<li>We'll have breaks for questions. You can ask your questions aloud if you want to.</li>
-							<li>Use the Chat to write down questions you want to come back to</li>
+							<li>We'll have breaks for questions. At that point you can ask a questions aloud if you want to.</li>
+							<li>Use the Chat to write down questions you think of along the way. I'll come back to them during discussion time.</li>
+							<li>There will be 3 informal exercises done in breakout rooms</li>
 							<li>Need a break? It's OK!</li>
 						</ul>
 						<aside class="notes">
@@ -62,48 +92,11 @@
 							You don't have to ask a question aloud if you don't want to. <br/>
 							And, of course, if you need to step away for a minute to use the restroom or just stretch and grab a glass of water, please
 							go ahead and do that. I know we've all been spending a lot of time on zoom lately. So it's good to get up and get a quick stretch
-							if you need to. I've posted the link to my slides in the chat, so you can always go back to a slide to review anything you might've missed.
-						</aside>
-					</section>
-					<section>
-						<h1 class="heading">Introduction</h1>
-						<p class="heading-small">Who are you anyway?</p>
-						<ul>
-							<li>Hi. I'm Alison.
-							</li>
-							<li>I'm a Software Engineer.
-							</li>
-							<li>When I'm not coding I like gardening and playing video games.
-							</li>
-						</ul>
-						<aside class="notes">
-							Just want to briefly introduce myself before moving on. Because I think it might be helpful 
-							for you to know a little bit about my background. Before I became a software engineer, I was a graphic designer. I made pretty pictures for magazines
-							and websites. <br/>
-							I actually went to art school, instead of going to a technical school. I don't have a degree in Computer Science. Actually, 
-							a lot of my fellow software engineers don't have computer science degrees either, and many of us came from different educational backgrounds.<br/>
-							I tell you this because I think most people believe that you need to be good at math and science in order to get a job in
-							technology... but that's simply not true. I really hated math when I was in school and I didn't think I was very good at it. That's why I went to art school.
-							But I fell in love with computer programming and decided to make a career change. So, all of this is to say... even if you don't think
-							you're very good at math or science, you can still be a computer programmer. And if I can do it, YOU can do it.
-						</aside>
-					</section>
-					<section>
-						<h1 class="heading">What's in This Workshop</h1>
-						<p class="heading-small">You'll be learning about...</p>
-						<ul>
-							<li>Servers & Databases</li>
-							<li>Querying Data</li>
-							<li>Application Programming Interface (API)</li>
-							<li>Fetching Data from API endpoints</li>
-						</ul>
-						<aside class="notes">
-							These are the subjects we'll be covering. Servers, Databases, querying data from databases, APIs, 
-							and fetching data from APIs. There are so many things to learn about these subjects... we're only 
-							going to scratch the surface. But hopefully this workshop will give you enough of a foundation that you'll
-							be interested in learning more about application development... and maybe even consider it as a career. <br/>
-							I'm going to be going through some slides to give you an overview of the topics, and we'll jump into various exercises along the way.<br/>
-							What's NOT in This Workshop... pop-quizzes or tests. You're not going to be quizzed on anything. 
+							if you need to. I've posted the link to my slides in the chat, so you can always go back to a slide to review anything you might've missed.<br/>
+							I'm going to be going through some slides to give you an overview of the topics, and we'll jump into various exercises along the way.
+							There are 3 exercises and I thought it would be good to try doing those in breakout rooms, that way you can more easily talk to each other
+							if you want to and help each other out.<br/>
+							I also wanted to make it clear that there are no pop-quizzes or tests. You're not going to be quizzed on anything. 
 							We're here today just to learn and make things. So don't worry about having to demonstrate anything.
 							With that said, let's begin at the beginning...
 						</aside>
@@ -306,21 +299,22 @@
 							<li>Go to this link: <a href="https://www.db-fiddle.com/f/hE57VcQbzx4KDzZMMEf2yF/9" target="_blank" rel="noopener noreferrer">https://www.db-fiddle.com/f/hE57VcQbzx4KDzZMMEf2yF/9</a></li>
 							<li>Click the link that says 'Fork' in the top nav bar</li>
 							<li>Click the link that says 'Run' in the top nav bar</li>
-							<li>This is a SQL statement that inserts new data into the favorite_foods table:<br/>
-								<span class="txt-mono">INSERT INTO favorite_foods (id, food_name, food_description) VALUES (3, 'avocado', 'delicious in a salad.');</span>
+							<li>Go to the last statement on the left and replace the word 'avocado' with a different food.<br/>
+								Replace the description that says 'delicious in a salad' with a different description.
 							</li>
-							<li>This is a query that retrieves the avocado record from the favorite_foods table:<br/>
-								<span class="txt-mono">SELECT * FROM favorite_foods WHERE food_name = 'avocado';</span>
+							<li>Click 'Run' again</li>
+							<li>Change the query on the right to: <br/>
+								<span class="txt-mono">SELECT * FROM favorite_foods WHERE food_name = 'your food name here'</span>
 							</li>
+							<li>Click 'Run' again!</li>
 						</ol>
 						<aside class="notes">
-							Now we're actually going to write some SQL! I'm pasting a link into the chat that you can copy and paste into a new browser tab.
-							It should open up to this view of a site where we can practice writing SQL queries... and it will 
-							simulate getting data from a real database. I'll give everyone a minute to make sure we're all on the same page.<br/>
-							Now, once you're ready, click on the link at the top that says 'Fork'. This will give you a copy of the original page, and this will allow you
+							Now we're actually going to write some SQL! What I'm going to do is demonstrate what you'll be doing, and then we
+							can all go into break out rooms and you can try for yourselves. I'll post the instructions in the chat so you can refer back to them.<br/>
+							I'm going to go to this link, and click on the link at the top that says 'Fork'. This will give you a copy of the original page, and this will allow you
 							to make changes without affecting the original page. You can always go back to the original link I posted 
 							and make another fork if you want to start over.<br/>
-							Ok, so now that you all have a forked copy, let's look over here on the left side. We have some SQL statements. 
+							Ok, so now that we have a forked copy, let's look over here on the left side. We have some SQL statements. 
 							These statements create 2 new database tables, and then these statements insert data into those tables. On the right side we have the SQL query that 
 							selects the data and returns it to us. <br>
 							Let's try running the program and see what happens. As you can see, it returns the data that we've asked for. This statement is saying "Give me
@@ -339,13 +333,16 @@
 						<img class="icon-img" src="images/data-journey-1.svg" alt="data journey"/>
 						<h1 class="heading">Our Data Journey So Far</h1>
 						<p class="heading-small">Let's recap</p>
-
+						<ol>
+							<li>Servers contain databases</li>
+							<li>Databases contain tables that hold our data</li>
+							<li>We can use SQL to change the data in a table, and to get data back</li>
+						</ol>
 						<span class="img-attribution">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> and <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a></span>
 						<aside class="notes">
-							We've learned that a query is an instruction that we give to the database, <br/>
-							in a language that the database understands, called SQL. 
-							These queries allow us to communicate with the database and tell 
-							it to do certain things with our data... like selecting, creating, updating, or deleting data. 
+							Ok, we've covered quite a bit of ground. So now is a good time to recap. We've learned that servers contain 
+							databases, and databases contain tables that hold our data. We can use Structured Query Language, or SQL, to talk
+							to a database and change data. We can also use SQL to get data back from a database.
 						</aside>
 					</section>
 					<section>
@@ -364,30 +361,44 @@
 				</section>
 				<section>
 					<section>
-						<h1 class="heading">Nullish Coalescing Operator</h1>
-						<p>
-							A logical operator denoted by <code>??</code>. The right side 
-							operand is returned when the <br/>left side operand is null or undefined. 
-							Otherwise, The left side operand is returned.
-						</p>
-						<p class="heading-small">Babel ^7.0, Edge, Chrome, Firefox, TypeScript ^3.7, Node.js 14</p>
+						<img class="icon-img" src="images/api.svg" alt="data journey"/>
+						<h1 class="heading">APIs</h1>
+						<p class="heading-small">What's an API?</p>
+						<ol>
+							<li>API stands for Application Programming Interface</li>
+							<li>Acts as a messenger between a database and other applications</li>
+							<li>The API receives requests for data, fetches the data from the database, and then returns it</li>
+						</ol>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a></span>
+						<aside class="notes">
+							So we’ve learned how to query a databases that we have access to, but what if I wanted to get data from a database 
+							that I don't have direct access to? What if I wanted to get data from Instagram's database? Or Facebook's database?
+							They don't give access to their database, because that would be unsafe. They can't let random people do whatever they want to their user data.</br>
+							So instead, they create an API. API stands for Application Programming Interface. <br/>
+							An API is an application that acts as a <em>messenger</em> between a database and other applications.
+							An application makes a request to the API for some data, the API fetches the data from the database, and then returns it to those applications. 
+							This allows companies like Facebook and Instagram to control what data people can have access to, and to control what they can do with that data.
+							Often, it will also act like a translator between the database and other applications, because it can format the data into a structure that’s easier for other applications to use. 
+							Let's look at some examples of APIs.
+						</aside>
 					</section>
 					<section>
-						<h3 class="heading">Nullish Coalescing Operator</h3>
-						<pre>
-							<code data-trim data-noescape>
-								const foo = null ?? 'Some default';
-
-								console.log(foo); // output: "Some default"
-								
-								let someUndefined;
-
-								const bar = someUndefined ?? 100;
-								// when left side is nullish, returns right side operand
-
-								console.log(bar); // output: 100
-							</code>
-						</pre>
+						<img class="icon-img" src="images/api.svg" alt="data journey"/>
+						<h1 class="heading">API Examples</h1>
+						<p class="heading-small">try it out</p>
+						<ol>
+							<li>Github API endpoint: <a href="https://api.github.com/users/alitinker" target="_blank" rel="noopener noreferrer">https://api.github.com/users/alitinker</a></li>
+							<li>Petstore API: <a href="https://petstore.swagger.io/" target="_blank" rel="noopener noreferrer">https://petstore.swagger.io/</a></li>
+						</ol>
+						<span class="img-attribution">Icon made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a></span>
+						<aside class="notes">
+							Here we have 2 different examples of APIs. The first is a very simple example of an API endpoint 
+							that returns info about a github user's account. Github is a website that programmers use to store code. And this is 
+							my username that's part of the URL. If we click the URL, we get raw data returned from the API. It shows all the public information 
+							from my account. If we were to put another github user's name at the end of this URL, it would return the info about their account too.<br/>
+							The next example is a Petstore API created by a company called Swagger. They created this API to show how easy it is to use APIs with
+							an interface that they built. 
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -498,19 +509,6 @@
 							<li>Some support: <a href="https://w3c.github.io/longtasks/">Long Tasks API</a></li>
 						</ul>
 					</section>
-				</section>
-				<section>
-					<h1 class="heading">Shape the Future</h1>
-					<p class="heading-small">They want your input</p>
-					<ul>
-						<li>
-							Submit issues or PRs to <a href="https://github.com/tc39/ecma262/blob/master/CONTRIBUTING.md">ECMAScript latest</a>, 
-							or submit a proposal.
-						</li>
-						<li>Join the <a href="https://developers.chrome.com/origintrials/#/trials/active">Google Origin Trials</a></li>
-						<li>Contribute to <a href="https://www.w3.org/participate/">W3C discussion lists, events, blogs, and translations</a></li>
-						<li>Participate in <a href="https://support.mozilla.org/en-US/kb/shield">FireFox Studies</a></li>
-					</ul>
 				</section>
 				<section>
 					<h1 class="heading">Thanks for watching!</h1>
