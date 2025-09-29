@@ -3,7 +3,7 @@
 </h1>
 <p><strong>Slides for the Make It Happen With APIs workshop in <a href="http://full-steam-ahead.info/">Full STEAM Ahead 2020 Conference</a></strong></p>
 
-<p>Presented August 7th 2020 by Alison Tinker</p>
+<p>Presented August 7th 2020 by Alden Tinker</p>
 
 <p><a href="https://aldentinker.github.io/make-it-happen-workshop">View the slides here: https://aldentinker.github.io/make-it-happen-workshop</a></p>
 
